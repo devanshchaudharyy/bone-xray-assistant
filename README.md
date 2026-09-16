@@ -26,7 +26,7 @@ A modern, full-stack AI-powered medical web application designed for real-time o
 ---
 ## 📸 Application Screenshot
 
-![RadVision AI Dashboard](<./frontend/public/Live ScreenShot.png>)
+![RadVision AI Dashboard](<./frontend/public/Live-ScreenShot.png>)
 
 
 ## 📁 Repository Structure

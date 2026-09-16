@@ -1,49 +1,44 @@
-# Bone X-Ray Assistant
+# 🦴 RadVision AI | Autonomous Orthopedic Radiography Suite
 
-Local Streamlit application for educational X-ray review with an optional Ollama
-vision model. When Ollama is unavailable, the app remains usable in offline
-fallback mode.
+A modern, full-stack AI-powered medical web application designed for real-time orthopedic X-ray visual analysis and interactive diagnostic support using local multimodal LLMs.
 
-## Requirements
+---
 
-- Python 3.9 or newer
-- Ollama is optional; install it and run `ollama pull llava` for real model
-  analysis
+## 🌟 Architectural Features
 
-## Setup on Windows
+* **Decoupled Architecture:** Built with a modern **FastAPI** backend server (Python) and a high-performance **Next.js 14** web frontend (TypeScript + Tailwind CSS).
+* **Local AI Vision Engine:** Powered by **Ollama** running the multimodal `llava` vision model locally for complete data privacy.
+* **Fallback Safety Engine:** Automatic offline detection that graceful switches to mock structured data if local AI models are unavailable.
+* **Interactive Diagnostic Workspace:**
+  * Multi-metric telemetry (Anatomical Region, Image Quality, Confidence Scoring).
+  * Identified Indications & Abnormalities breakdown.
+  * Context-aware Radiology Summary Narrative.
+  * Follow-up clinical assistant chat interface.
 
-Open PowerShell in this project folder and run:
+---
 
-```powershell
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m streamlit run app.py
-```
+## 🛠️ Tech Stack
 
-Open the URL printed by Streamlit, normally
-`http://localhost:8501`. Do not use the deleted `venv` folder; `.venv` is the
-single project environment.
+* **Frontend:** Next.js 14 (App Router), React, TypeScript, Tailwind CSS
+* **Backend:** Python 3.10+, FastAPI, Uvicorn, Pydantic
+* **AI Engine:** Ollama (`llava` 7B vision model)
 
-## Optional Ollama setup
+---
 
-```powershell
-ollama pull llava
-```
+## 📁 Repository Structure
 
-Without Ollama, the application uses its built-in offline demonstration
-response. Configuration can be provided through a `.env` file based on
-`.env.example`.
-
-## Verification
-
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-```
-
-The test suite verifies upload-directory handling and the offline analysis/chat
-pipeline. Uploaded images are stored in `uploads`.
-
-## Safety
-
-This is an experimental educational tool, not a medical diagnostic device.
-Findings must be reviewed by a qualified radiologist or orthopedic specialist.
+```text
+bone-xray-assistant/
+├── backend/                  # FastAPI Python Backend
+│   ├── main.py               # REST API Endpoints (/api/analyze, /api/chat, /api/health)
+│   ├── ai_agent.py           # Core Vision Agent & Ollama Integration
+│   ├── requirements.txt      # Python Dependencies
+│   └── uploads/              # Local Storage for Analyzed Radiographs
+│
+└── frontend/                 # Next.js 14 Frontend Client
+    ├── app/
+    │   ├── page.tsx          # Production Medical Dashboard Layout
+    │   ├── globals.css       # Tailwind Styles & Obsidian Dark Theme
+    │   └── layout.tsx
+    ├── package.json
+    └── tailwind.config.ts

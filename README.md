@@ -26,7 +26,7 @@ A modern, full-stack AI-powered medical web application designed for real-time o
 ---
 ## 📸 Application Screenshot
 
-![Dark-themed RadVision AI orthopedic radiography dashboard. The header shows RadVision AI, V1.0 Enterprise, Autonomous Orthopedic Radiography Suite, Workspace, API Docs, System Info, and Vision Engine: Fallback Mode. The main workspace contains three panels: Import Radiograph with Choose File and Run Vision Pipeline controls, Vision Analytics prompting the user to upload a radiograph and run the pipeline, and Clinical Assistant with guidance about joint alignment, fracture severity, and rehabilitation protocols, plus a follow-up query field and Send button. A warning banner states that RadVision AI is an experimental computer-vision decision-support prototype, not a certified medical diagnostic device, and that all findings must be independently reviewed by a licensed medical practitioner or radiologist. The footer shows © 2026 RadVision AI All rights reserved and Maintained & Developed by Devansh. The spacious dark interface has a professional clinical tone.](.\frontend\public\Live ScreenShot.png)
+![RadVision AI Dashboard](<./frontend/public/Live ScreenShot.png>)
 
 
 ## 📁 Repository Structure

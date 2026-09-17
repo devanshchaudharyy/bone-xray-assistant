@@ -1,6 +1,29 @@
+# Python Virtual Environment & Cache
+.venv/
 venv/
+env/
 __pycache__/
 *.pyc
+
+# Node & Next.js Dependencies
+node_modules/
+.next/
+out/
+build/
+*.log
+
+# Environment Variables & Secrets
 .env
-uploads/*
-!.gitignore
+.env.local
+.env.production
+.env.development
+
+# Uploaded Medical Images & Temp Files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
